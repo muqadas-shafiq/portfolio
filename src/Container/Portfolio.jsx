@@ -6,15 +6,13 @@ import bags from '../assets/bags.jpg'
 import home from'../assets/home.jpg'
 import bag from '../assets/bag.jpg'
 import girl from '../assets/girl.jpg'
-import { useState } from 'react';
 import Mission from './Mission';
 import HeroSection from './HeroSection';
 import Work from './Work';
 
 
 const Portfolio = () => {
-  const [tab, setTab] = useState('tab1');
-
+ 
   const data1 = [
     {
       icon: SiTicktick,

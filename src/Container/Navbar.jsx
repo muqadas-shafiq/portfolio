@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { IoMenu } from "react-icons/io5";
+
 
 const Navbar = () => {
   const location= window.location.pathname
@@ -13,7 +15,7 @@ const Navbar = () => {
     <div>
         <nav className="flex justify-between items-center px-10 py-8">
       {/* Logo */}
-      <div className="text-2xl text-gray-500 font-medium">Logo</div>
+      <div className="md:text-2xl text-3xl text-gray-500 font-medium">Logo</div>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex md:gap-8 gap-5 text-xl">
@@ -33,7 +35,7 @@ const Navbar = () => {
 
       {/* Hamburger Icon */}
       <div className='md:hidden text-2xl cursor-pointer' onClick={toggleMenu}>
-        menu
+      <IoMenu className='text-5xl'/>
       </div>
       {/* Mobile Menu */}
       {menuOpen && (
@@ -47,9 +49,9 @@ const Navbar = () => {
           <li>
             <Link className="hover:text-gray-400 cursor-pointer" to={'/About'}>About</Link>
             </li>
-          <li>
-            <Link className="hover:text-gray-400 cursor-pointer" to={'/Contact'}>Contact</Link>
-            </li>
+            <li>
+          <Link className={`cursor-pointer border py-2 px-5 ${location === '/Login'?'text-gray-600':'text-black'}`} to={'/Contact'}>Login</Link>
+          </li>
         </ul>
       )}
     </nav>

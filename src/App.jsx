@@ -1,11 +1,10 @@
-import React from 'react'
+
 import Portfolio from './Container/Portfolio'
 import {BrowserRouter,Routes ,Route} from 'react-router-dom'
 import Landing from './Container/Landing'
 import About from './Container/About'
 import Contact from './Container/Contact'
 import Navbar from './Container/Navbar'
-import Api from './Container/Api'
 
 
 const App = () => {
@@ -20,7 +19,6 @@ const App = () => {
         <Route path='/Contact' element={<Contact/>}></Route>
       </Routes>
       </BrowserRouter>
-      <Api/>
     </div>
   )
 }

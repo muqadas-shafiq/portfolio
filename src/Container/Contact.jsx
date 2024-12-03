@@ -1,4 +1,4 @@
-import React from 'react'
+
 import HeroSection from './HeroSection'
 import Work from './Work'
 
@@ -33,7 +33,7 @@ const Contact = () => {
       </div>
     </div>
    <div className='flex justify-center mt-20'>
-   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108857.80410805141!2d74.24849152187369!3d31.50200547150305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018da644cf15%3A0xf7e66d6f39b9a46d!2stownship%20Lahore!5e0!3m2!1sen!2s!4v1732817313485!5m2!1sen!2s" md:width="1200" width={"600"} height="550"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108857.80410805141!2d74.24849152187369!3d31.50200547150305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018da644cf15%3A0xf7e66d6f39b9a46d!2stownship%20Lahore!5e0!3m2!1sen!2s!4v1732817313485!5m2!1sen!2s" className='md:w-full w-[200px]' height="550"  allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
    </div>
 
         <Work text={"LET'S WORK"}/>

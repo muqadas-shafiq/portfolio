@@ -28,7 +28,7 @@ const About = () => {
         <HeroSection text={"ABOUT"}/>
         <div className='pl-20 max-w-[80%] my-10'> 
           <div className=''>
-            <h1 className='text-2xl md:text-4xl font-bold md:leading-[50px]'>OUR STUDIO INTIGRATE TOP-TIER GRAPHICS, PHOTOGRAPHY AND WEB DESIGNING , CRAFTING COMPELLING VISUAL NARATIVE FOR YOUR BRAND'S SUCCESS. </h1>
+            <h1 className='text-2xl md:text-4xl font-bold md:leading-[50px]'>OUR STUDIO INTIGRATE TOP-TIER GRAPHICS, PHOTOGRAPHY AND WEB DESIGNING , CRAFTING COMPELLING VISUAL NARATIVE FOR YOUR BRAND&apos;S SUCCESS. </h1>
           </div>
           <div >
             <p className='text-2xl py-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum repudiandae magnam accusamus neque asperiores, voluptas id eligendi itaque tempora, molestias totam ipsa pariatur harum ipsam aliquam provident! Culpa, quasi officiis.</p>
