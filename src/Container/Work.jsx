@@ -41,7 +41,6 @@ const Work = ({text}) => {
   <h1>frontend developer</h1>
 </div>
      </div>
-      
     </div>
   )
 }

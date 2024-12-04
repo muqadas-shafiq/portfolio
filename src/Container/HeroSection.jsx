@@ -11,7 +11,7 @@ const HeroSection = ({text}) => {
     <div>
          <div className='md:min-h-[90vh] min-h-[50vh] py-5 md:py-0 flex flex-col justify-center items-center'>
         <h2 className='text-2xl font-bold '>FREELANCE/OFFICE</h2>
-        <h1 className='md:text-9xl text-7xl font-bold py-4'>{text}</h1>
+        <h1 className='md:text-9xl text-5xl font-bold py-4'>{text}</h1>
         <div className='flex justify-center md:text-3xl text-2xl font-medium h-20 w-full md:px-10 px-5'>
   <h1>frontend developer</h1>
 </div>
