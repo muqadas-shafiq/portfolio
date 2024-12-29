@@ -14,7 +14,7 @@ import 'aos/dist/aos.css'
 
 const Portfolio = () => {
   useEffect(()=>{
-    AOS.init({duration:1000});
+    AOS.init({duration:2000});
   },[]);
  
   const data1 = [
@@ -62,7 +62,7 @@ const Portfolio = () => {
      <HeroSection text={"MUQADAS"}/>
       {/* img */}
       <div
-  className="bg-cover bg-center min-h-screen w-full" data-aos="fade-left"
+  className="bg-cover bg-center min-h-screen w-full" data-aos="flip-left"
   style={{ backgroundImage: `url(${work})`}}
 ></div>
 
