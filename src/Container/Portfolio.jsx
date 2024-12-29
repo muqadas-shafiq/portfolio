@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useEffect}from 'react'
 import { SiTicktick } from "react-icons/si";
 import work from '../assets/work.jpg'
 import { FaArrowCircleRight } from "react-icons/fa";
@@ -9,9 +9,13 @@ import girl from '../assets/girl.jpg'
 import Mission from './Mission';
 import HeroSection from './HeroSection';
 import Work from './Work';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const Portfolio = () => {
+  useEffect(()=>{
+    AOS.init({duration:2000});
+  },[]);
  
   const data1 = [
     {
@@ -58,13 +62,13 @@ const Portfolio = () => {
      <HeroSection text={"MUQADAS"}/>
       {/* img */}
       <div
-  className="bg-cover bg-center min-h-screen w-full "
+  className="bg-cover bg-center min-h-screen w-full" data-aos="fade-left"
   style={{ backgroundImage: `url(${work})`}}
 ></div>
 
 
 {/* menu */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-7 py-4 mt-20">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-7 py-4 mt-20" data-aos="fade-up">
       {data1.map((item, index) => (
         <div key={index} className="border p-6 rounded shadow-md  bg-gray-200">
         <div className='flex justify-end '> <item.icon className="text-4xl " /></div>
@@ -77,7 +81,7 @@ const Portfolio = () => {
        </div>
       ))}
     </div>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-7 py-4">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-7 py-4" data-aos="fade-up">
       {data2.map((item, index) => (
          <div key={index} className="border p-6 rounded shadow-md  bg-gray-200">
          <div className='flex justify-end '> <item.icon className="text-4xl " /></div>
@@ -93,8 +97,8 @@ const Portfolio = () => {
     
     </div>
     {/* latest projects */}
-    <h1 className='md:text-6xl text-4xl font-bold p-8 '>LATEST PROJECTS</h1>
-    <div className=' gap-8 md:grid md:grid-cols-2'>
+    <h1 className='md:text-6xl text-4xl font-bold p-8 ' >LATEST PROJECTS</h1>
+    <div className=' gap-8 md:grid md:grid-cols-2' data-aos="fade-up">
       <div >
         <div>
           <img src={work} />
@@ -127,7 +131,7 @@ const Portfolio = () => {
       <div >
         </div>
       </div>
-    <div className=' gap-8 md:grid md:grid-cols-2'>
+    <div className=' gap-8 md:grid md:grid-cols-2' data-aos="fade-up">
       <div >
         <div>
           <img src={home} />
@@ -161,7 +165,7 @@ const Portfolio = () => {
         </div>
       </div>
       {/* vission */}
-      <div className='flex flex-col justify-center items-center mb-10 md:px-10 px-5'>
+      <div className='flex flex-col justify-center items-center mb-10 md:px-10 px-5' data-aos="fade-up">
         <div className='flex justify-center'>
           <img src={girl}  />
         </div>
@@ -179,10 +183,10 @@ const Portfolio = () => {
       <Mission/>
       {/* repeat divs */}
       <div
-  className="bg-cover bg-center min-h-screen w-full mt-5 "
+  className="bg-cover bg-center min-h-screen w-full mt-5 " data-aos="fade-up"
   style={{ backgroundImage: `url(${work})`}}
 ></div>
-<div className="grid grid-cols-1 md:grid-cols-2 gap-7 py-4 mt-20">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-7 py-4 mt-20" data-aos="fade-up">
       {data1.map((item, index) => (
         <div key={index} className="border p-6 rounded shadow-md  bg-gray-200">
         <div className='flex justify-end '> <item.icon className="text-4xl " /></div>
@@ -195,7 +199,7 @@ const Portfolio = () => {
        </div>
       ))}
     </div>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-7 py-4">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-7 py-4" data-aos="fade-up">
       {data2.map((item, index) => (
          <div key={index} className="border p-6 rounded shadow-md  bg-gray-200">
          <div className='flex justify-end '> <item.icon className="text-4xl " /></div>
@@ -209,7 +213,7 @@ const Portfolio = () => {
       ))}
     </div>
     {/* certificate */}
-    <div className='flex  justify-between my-10 flex-col md:flex-row px-5'>
+    <div className='flex  justify-between my-10 flex-col md:flex-row px-5' data-aos="fade-down">
       <div>
       <h1 className='md:text-7xl text-4xl font-bold py-5'>CERTIFICATE</h1>
       </div>
