@@ -1,18 +1,24 @@
 
 import HeroSection from './HeroSection'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 import Work from './Work'
+import { useEffect } from 'react';
 
 const Contact = () => {
+  useEffect(()=>{
+    AOS.init({duration:1000});
+  },[]);
   return (
     <div>
         <HeroSection text={"CONTACT"}/>
         {/* locations */}
         <div className='flex  justify-between my-10 flex-col md:flex-row px-5'>
-      <div className='pl-6'>
+      <div className='pl-6'data-aos="fade-right">
         <h3 className='flex items-center justify-between text-3xl '>REACH OUT US TODAY</h3>
       <h1 className='md:text-7xl text-4xl font-bold py-5'>LOCATIONS</h1>
       </div>
-      <div className='pr-20'>
+      <div className='pr-20' data-aos="fade-left">
         <div className='pl-7'>
         <h1 className="text-3xl">PAKISTAN</h1>
         <h1 className="text-[17px] font-bold py-2">LAHORE </h1>

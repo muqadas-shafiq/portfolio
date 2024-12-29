@@ -5,7 +5,6 @@ import Landing from './Container/Landing'
 import About from './Container/About'
 import Contact from './Container/Contact'
 import Navbar from './Container/Navbar'
-import Login from './Container/Login'
 
 
 const App = () => {
@@ -18,7 +17,7 @@ const App = () => {
         <Route path='/Landing' element={<Landing/>}></Route>
         <Route path='/About' element={<About/>}></Route>
         <Route path='/Contact' element={<Contact/>}></Route>
-        <Route path='/login' element={<Login/>}></Route>
+        
       </Routes>
       </BrowserRouter>
     </div>

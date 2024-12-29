@@ -31,9 +31,6 @@ const Navbar = () => {
         <li>
           <Link className={`cursor-pointer ${location === '/Contact'?'text-gray-600':'text-black'}`} to={'/Contact'}>Contact</Link>
           </li>
-        <li>
-          <Link className={`cursor-pointer border border-black py-1 px-3 bg-gray-100 font-medium ${location === '/login'?'text-gray-600':'text-black'}`} to={'/login'}>Login</Link>
-          </li>
       </ul>
 
       {/* Hamburger Icon */}
@@ -54,9 +51,6 @@ const Navbar = () => {
             </li>
             <li>
           <Link className={`cursor-pointer border py-2 px-5 ${location === '/Login'?'text-gray-600':'text-black'}`} to={'/Contact'}>Login</Link>
-          </li>
-            <li>
-          <Link className={`cursor-pointer border py-2 px-5  ${location === '/Login'?'text-gray-600':'text-black'}`} to={'/login'}>Login</Link>
           </li>
         </ul>
       )}

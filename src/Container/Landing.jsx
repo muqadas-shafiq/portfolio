@@ -18,7 +18,13 @@ import woman1 from '../assets/woman1.jpg'
 import woman2 from '../assets/woman2.jpg'
  import writing from '../assets/writing.jpg'
 import Work from './Work'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 const Landing = () => {
+  useEffect(()=>{
+    AOS.init({duration:2000});
+  },[]);
       const menu=[
         {
             count:"01",
@@ -86,12 +92,12 @@ const Landing = () => {
         <HeroSection text={"PORTFOLIO"}/>
       {/* img */}
       <div
-  className="bg-cover bg-center min-h-screen w-full "
+  className="bg-cover bg-center min-h-screen w-full " data-aos="flip-left"
   style={{ backgroundImage: `url(${desktop})`}}
 ></div>
 
 {/* menu */}
-<div className='grid grid-cols-1 md:grid-cols-4 px-3 py-20 md:mt-10 gap-10 '>
+<div className='grid grid-cols-1 md:grid-cols-4 px-3 py-20 md:mt-10 gap-10 ' data-aos="fade-right">
     {menu.map((item,index)=>(
         <div key={index} className='flex flex-col justify-start gap-5 items-center'>
             <p className='text-2xl'>{item.count}</p>
@@ -103,7 +109,7 @@ const Landing = () => {
 </div>
 <Mission/>
 {/* menu */}
-<div className=' flex flex-col px-10 md:flex-row gap-16 my-10'>
+<div className=' flex flex-col px-10 md:flex-row gap-16 my-10' data-aos="fade-right">
 {text.map((item,index)=>(
     <div key={index}>
         <div className='text-2xl font-bold pb-5 '>{item.h1}</div>
@@ -114,11 +120,11 @@ const Landing = () => {
 </div>
 
 <div className='flex flex-col md:flex-row mt-5 md:mt-20 gap-10'>
-    <div className='md:max-w-[50%]'>
+    <div className='md:max-w-[50%]'data-aos="fade-right">
         <img src={girl} />
     </div>
     
-    <div  className='bg-gray-200 flex-col'>
+    <div  className='bg-gray-200 flex-col' data-aos="fade-left">
         <div><h1 className='text-9xl pl-2'>,,</h1></div>
         <p className='text-[25px] md:text-2xl pt-10 px-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo minus nobis qui quis, ipsam aliquid vero tenetur possimus accusamus voluptatibus magnam unde debitis voluptates earum laudantium magni facilis. Repudiandae, impedit?</p>
         <div className='p-8 text-2xl font-medium'>
@@ -128,7 +134,7 @@ const Landing = () => {
     </div>
 </div>
 {/* icons */}
-<div className='grid md:grid-cols-4 grid-cols-3 mt-4 md:my-20'>
+<div className='grid md:grid-cols-4 grid-cols-3 mt-4 md:my-20' data-aos="fade-up">
     {icons.map(({id,src})=>(
         <div key={id} className='flex justify-center md:p-10 py-5'>
             {React.createElement(src, { className: "md:text-7xl text-4xl" })}
@@ -136,7 +142,7 @@ const Landing = () => {
     ))}
 </div>
 {/* persons */}
- <div className='bg-gray-200'>
+ <div className='bg-gray-200' data-aos="fade-up">
    <div className='flex'>
    <div className='md:max-w-full hidden md:flex'>
         <img src={woman1}/>
@@ -153,12 +159,12 @@ const Landing = () => {
 
 {/* certificate */}
 <div className='flex  justify-between my-5 md:my-24 flex-col md:flex-row pl-10 md:px-5'>
-      <div className='w-full md:w-[50%] bg-slate-100 md:pl-5'>
+      <div className='w-full md:w-[50%] bg-slate-100 md:pl-5' data-aos="fade-right">
       <h1 className='md:text-7xl text-4xl font-bold py-5'>CERTIFICATE</h1>
       <img src={writing}  />
       </div>
-      <div className='pr-20 mt-5'>
-        <div>
+      <div className='pr-20 mt-5'data-aos="fade-left">
+        <div >
         <h1 className="text-3xl">2024</h1>
         <h1 className="text-2xl font-bold py-3">Website <br /> Development </h1>
         <p className='max-w-lg text-[20px]  text-gray-800'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque nisi, amet aspernatur molestias dolore alias distinctio a ipsa possimus id est expedita nostrum ipsam, vero accusamus rerum ab inventore sunt.</p>
@@ -171,8 +177,8 @@ const Landing = () => {
       </div>
     </div>
     {/* imgs */}
-    <div className='grid grid-cols-1 md:grid-cols-4 gap-10 bg-cover bg-center'>
-       <div>
+    <div className='grid grid-cols-1 md:grid-cols-4 gap-10 bg-cover bg-center' data-aos="fade-up">
+       <div >
        <img src={apple} />
        </div>
        <div  className='flex max-w-full'><img src={laptop1} /></div>
@@ -188,7 +194,7 @@ const Landing = () => {
       ))}
    </div>
    {/* our-work */}
-   <div className='flex  justify-between mt-5 md:my-24 flex-col md:flex-row'>
+   <div className='flex  justify-between mt-5 md:my-24 flex-col md:flex-row' data-aos="fade-up">
       <div className='flex flex-col justify-center items-center pr-20 bg-slate-100 pt-5 pl-8 md:w-[50%] h-[170px]'>
         <h1 className='text-3xl font-medium '>SERVICES</h1>
       <h1 className='md:text-7xl text-4xl font-bold py-2'>OUR WORK</h1>

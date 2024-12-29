@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useEffect} from 'react'
 import HeroSection from './HeroSection';
 import { SiTicktick } from "react-icons/si";
 import { TbBriefcaseOff } from "react-icons/tb";
@@ -10,9 +10,14 @@ import { FaArrowsToCircle, FaRegCircleUser } from "react-icons/fa6";
 import { SlSocialDropbox } from "react-icons/sl";
 import girl from '../assets/girl.jpg'
 import Work from './Work';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 
 const About = () => {
+  useEffect(()=>{
+    AOS.init({duration:1000});
+  },[]);
   const icons=[
     {id:1, src:TbBriefcaseOff},
     {id:1, src:SiSuzuki },
@@ -26,7 +31,7 @@ const About = () => {
   return (
     <div>
         <HeroSection text={"ABOUT"}/>
-        <div className='pl-20 max-w-[80%] my-10'> 
+        <div className='pl-20 max-w-[80%] my-10' data-aos="fade-up"> 
           <div className=''>
             <h1 className='text-2xl md:text-4xl font-bold md:leading-[50px]'>OUR STUDIO INTIGRATE TOP-TIER GRAPHICS, PHOTOGRAPHY AND WEB DESIGNING , CRAFTING COMPELLING VISUAL NARATIVE FOR YOUR BRAND&apos;S SUCCESS. </h1>
           </div>
@@ -39,7 +44,7 @@ const About = () => {
         </div>
         {/* menu */}
         {/* div1 */}
-        <div className='min-h-screen my-5 md:my-10'>
+        <div className='min-h-screen my-5 md:my-10'  data-aos="fade-left">
        <div className='flex flex-col md:flex-row gap-5 px-5 '>
            <div className='w-96'></div>
           <div className='md:w-[35%] bg-gray-200  p-10 rounded'>
@@ -59,7 +64,7 @@ const About = () => {
           </div>
           {/* div2 */}
           </div>
-       <div className='flex flex-col md:flex-row gap-5 px-5 mt-5 md:mt-10 '>
+       <div className='flex flex-col md:flex-row gap-5 px-5 mt-5 md:mt-10 ' data-aos="fade-right">
        <div className='md:w-[35%] bg-gray-200 p-10 rounded'>
            <div className='flex justify-end  pb-10 text-5xl '>
             <SiTicktick/>
@@ -79,7 +84,7 @@ const About = () => {
           </div>
           </div>
 {/* icons */}
-<div className='grid md:grid-cols-4 grid-cols-3 mt-4 md:my-20'>
+<div className='grid md:grid-cols-4 grid-cols-3 mt-4 md:my-20'data-aos="fade-up">
     {icons.map(({id,src})=>(
         <div key={id} className='flex justify-center md:p-10 py-5'>
             {React.createElement(src, { className: "md:text-7xl text-4xl" })}
@@ -88,11 +93,11 @@ const About = () => {
 </div>
 
 <div className='flex flex-col md:flex-row mt-5 md:mt-20 gap-10'>
-    <div className='md:max-w-[50%]'>
+    <div className='md:max-w-[50%]'  data-aos="fade-right">
         <img src={girl} />
     </div>
     
-    <div  className='bg-gray-200  items-center flex-col'>
+    <div  className='bg-gray-200  items-center flex-col' data-aos="fade-left">
         <div><h1 className='text-9xl pl-2'>,,</h1></div>
         <p className='text-2xl pt-10 px-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo minus nobis qui quis, ipsam aliquid vero tenetur possimus accusamus voluptatibus magnam unde debitis voluptates earum laudantium magni facilis. Repudiandae, impedit?</p>
         <div className='p-8 text-2xl font-medium'>

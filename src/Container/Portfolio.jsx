@@ -14,7 +14,7 @@ import 'aos/dist/aos.css'
 
 const Portfolio = () => {
   useEffect(()=>{
-    AOS.init({duration:2000});
+    AOS.init({duration:1000});
   },[]);
  
   const data1 = [
@@ -169,7 +169,7 @@ const Portfolio = () => {
         <div className='flex justify-center'>
           <img src={girl}  />
         </div>
-        <div className=' flex flex-col justify-center '>
+        <div className=' flex flex-col justify-center ' data-aos="fade-left">
         <h1 className='md:text-7xl text-4xl font-bold md:py-10 py-5'>CREATIVE VISIONARY</h1>
         <p className="text-gray-800  text-[20px] py-5 font-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, magnam dicta tempora amet veniam hic soluta cumque facere mollitia ad quos nisi ut iusto eos nemo, atque voluptate voluptatum illum.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, magnam dicta tempora amet veniam hic soluta cumque facere mollitia ad quos nisi ut iusto eos nemo, atque voluptate voluptatum illum.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, magnam dicta tempora amet veniam hic soluta cumque facere mollitia ad quos nisi ut iusto eos nemo, atque voluptate voluptatum illum.</p>
         <div className='flex justify-start '>

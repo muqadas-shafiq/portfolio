@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const Mission = () => {
+  useEffect(()=>{
+    AOS.init({duration:1000})
+},{})
   return (
-    <div><div className='flex md:my-20 gap-20 md:mt-16 flex-col md:flex-row  pl-5'>
+    <div><div className='flex md:my-20 gap-20 md:mt-16 flex-col md:flex-row  pl-5' data-aos="fade-up">
     <div className='flex flex-col md:px-6'> 
     <h1 className='flex items-center justify-between text-3xl pb-3'>MOTIVATION</h1>
    <h1 className='md:text-7xl text-4xl font-bold  md:py-5'>MISSION AND</h1>

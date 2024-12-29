@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaFacebookMessenger,FaFacebook,FaAddressBook}  from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const Work = ({text}) => {
+  useEffect(()=>{
+    AOS.init({duration:1000})
+  },{})
     const links =[
         {id:9,src:FaFacebookMessenger},
         {id:8,src:FaFacebook},
@@ -9,7 +14,7 @@ const Work = ({text}) => {
       ]
   return (
     <div>
-         <div className=' flex flex-col justify-center items-center rounded mt-10 md:mt-28 px-4'>
+         <div className=' flex flex-col justify-center items-center rounded mt-10 md:mt-28 px-4'data-aos="fade-up">
         <h2 className='text-2xl font-bold '>FREELANCE/OFFICE</h2>
         <h1 className='md:text-9xl text-5xl font-bold py-8'>{text} </h1>
         <div className="flex space-x-4">
