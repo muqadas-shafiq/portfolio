@@ -1,25 +1,10 @@
-
-import Portfolio from './Container/Portfolio'
-import {BrowserRouter,Routes ,Route} from 'react-router-dom'
-import Landing from './Container/Landing'
-import About from './Container/About'
-import Contact from './Container/Contact'
-import Navbar from './Container/Navbar'
-
+import React from 'react'
+import Home from './Container/Home'
 
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
-  <Navbar/>
-      <Routes>
-        <Route path='/' element={<Portfolio/>}></Route>
-        <Route path='/Landing' element={<Landing/>}></Route>
-        <Route path='/About' element={<About/>}></Route>
-        <Route path='/Contact' element={<Contact/>}></Route>
-        
-      </Routes>
-      </BrowserRouter>
+      <Home/>
     </div>
   )
 }
