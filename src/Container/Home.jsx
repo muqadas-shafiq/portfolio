@@ -1,34 +1,16 @@
 import React from "react";
 import { WiLightning } from "react-icons/wi";
-import autmn from "../assets/autmn.jpeg";
-import men1 from "../assets/men1.jpeg";
-import women1 from "../assets/women1.jpeg";
-import kid1 from "../assets/kid1.jpeg";
+import Herosection from "./Herosection";
+import Collection from "./Collection";
+import Salesection from "./Salesection";
 
 const Home = () => {
-  const collections = [
-    {
-      name: "MENS",
-      img: men1,
-      button: "CLICK FOR MORE",
-    },
-    {
-      name: "WOMENS",
-      img: women1,
-      button: "CLICK FOR MORE",
-    },
-    {
-      name: "KIDS",
-      img: kid1,
-      button: "CLICK FOR MORE",
-    },
-  ];
 
   return (
     <div>
       {/* Navbar */}
       <div className="h-12 bg-gray-800 fixed top-0 left-0 w-full z-50 shadow-md">
-        <div className="h-12 flex flex-row items-center justify-between px-6">
+        <div className="h-12 flex flex-row items-center justify-between md:px-6">
           <div className="flex flex-row">
             <WiLightning className="text-green-500 text-4xl font-bold" />
             <p className="text-white">
@@ -45,29 +27,8 @@ const Home = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="relative w-full h-screen">
-        <img src={autmn} alt="Autumn" className="w-full h-screen object-cover" />
-        <div className="absolute inset-0 flex justify-center">
-          <div className="flex justify-center items-center text-white">
-            <div className="text-center">
-              <p>
-                <span className="text-4xl md:text-6xl md:font-light">
-                  BUILT FASHION
-                </span>
-                <br />
-                <span className="md:text-8xl text-5xl font-semibold md:font-bold">
-                  WITH THE SOUL
-                </span>
-                <br />
-                <span className="text-4xl md:text-6xl md:font-light">
-                  OF INSPIRATION
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 
+      <Herosection/>
       {/* Introduction Section */}
       <div className="flex flex-col items-center min-h-72 text-center py-20">
         <p className="text-3xl font-semibold pb-4">SELECT YOUR COLLECTION</p>
@@ -78,26 +39,19 @@ const Home = () => {
       </div>
 
       {/* Collections Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-20 py-8">
-        {collections.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center p-4 shadow-lg rounded-lg bg-gray-100"
-          >
-            <p className="text-2xl pb-2">{item.name}</p>
-            <img src={item.img}
-              
-              className="w-full h-96 object-cover rounded-lg mb-4"
-            />
-          
-            <button className="border-2 border-black text-black px-4 py-2 rounded bg-white  mt-4 ">
-              {item.button}
-            </button>
-          </div>
-        ))}
+      <Collection/>
+      {/* sale section */}
+      <Salesection/>
+      {/* Location */}
+      <div >
+        <h3 class="flex items-center justify-between text-3xl mt-5">REACH OUT US TODAY</h3>
+        <h1 class="md:text-5xl text-4xl font-semibold py-5">OUR LOCATION</h1>
       </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10478.777503658177!2d74.31792886732067!3d31.44522827935452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391906c6c5053c7b%3A0xe3c53a5968aab635!2sQuaid%20e%20Azam%20Industrial%20Estate%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1738144313941!5m2!1sen!2s" className="md:w-full w-[400px]" height="550" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
     </div>
   );
 };
 
 export default Home;
+
