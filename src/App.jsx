@@ -1,10 +1,12 @@
 import React from 'react'
 import Home from './Container/Home'
+import Footer from './Container/Footer'
 
 const App = () => {
   return (
     <div>
       <Home/>
+    <Footer/>
     </div>
   )
 }
