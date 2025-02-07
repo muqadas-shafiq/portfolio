@@ -2,6 +2,7 @@ import React from 'react'
 import men1 from "../assets/men1.jpeg";
 import women1 from "../assets/women1.jpeg";
 import kid1 from "../assets/kid1.jpeg";
+import { Link } from 'react-router-dom';
 
 const Collection = () => {
      const collections = [
@@ -9,16 +10,19 @@ const Collection = () => {
           name: "MENS",
           img: men1,
           button: "CLICK FOR MORE",
+          path: "/mens"
         },
         {
           name: "WOMENS",
           img: women1,
           button: "CLICK FOR MORE",
+          path: "/women"
         },
         {
           name: "KIDS",
           img: kid1,
           button: "CLICK FOR MORE",
+          path: "/kid"
         },
       ];
   return (
@@ -35,9 +39,11 @@ const Collection = () => {
               className="w-full h-96 object-cover rounded-lg mb-4"
             />
           
-            <button className="border-2 border-black text-black px-4 py-2 rounded bg-white  mt-4 ">
-              {item.button}
-            </button>
+          <Link to={item.path}>
+              <button className="border-2 border-black text-black px-4 py-2 rounded bg-white mt-4">
+                CLICK FOR MORE
+              </button>
+            </Link>
           </div>
         ))}
       </div>
