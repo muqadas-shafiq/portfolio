@@ -14,7 +14,7 @@ const Navbar = () => {
                     </p>
                   </div>
                   <div>
-                    <button className="bg-green-500 px-3 py-1 font-semibold text-white rounded">
+                    <button className="bg-green-500 py-1 px-1 text-white rounded">
                       Buy Now
                     </button>
                   </div>
