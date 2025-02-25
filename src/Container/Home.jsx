@@ -4,8 +4,14 @@ import Salesection from "./Salesection";
 import Footer from "./Footer";
 import autmn from "../assets/autmn.jpeg";
 import Navbar from "./Navbar";
+import AOS from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(()=>{
+    AOS.init({duration: 2000});
+  },[]);
 
   return (
     <div>
@@ -17,7 +23,7 @@ const Home = () => {
                        <img src={autmn} alt="Autumn" className="w-full h-screen object-cover" />
                        <div className="absolute inset-0 flex justify-center">
                          <div className="flex justify-center items-center text-white">
-                           <div className="text-center">
+                           <div className="text-center" data-aos="zoom-in">
                              <p>
                                <span className="text-4xl md:text-6xl md:font-light">
                                  BUILT FASHION
@@ -38,7 +44,7 @@ const Home = () => {
                        
 
       {/* Introduction Section */}
-      <div className="flex flex-col items-center min-h-72 text-center py-20">
+      <div className="flex flex-col items-center min-h-72 text-center py-20" data-aos="fade-up">
         <p className="text-3xl font-semibold pb-4">SELECT YOUR COLLECTION</p>
         <p className="text-2xl text-gray-900">
           Beauty is a harmony of inner grace and outward expressions. <br />

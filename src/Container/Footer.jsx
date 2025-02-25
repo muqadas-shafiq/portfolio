@@ -1,14 +1,19 @@
 import React from "react";
+import { useEffect } from "react";
 import butterfly from "../assets/butterfliy.jpeg";
 import { FaInstagram } from "react-icons/fa6";
 import { CiFacebook, CiTwitter } from "react-icons/ci";
-
+import AOS from "aos";
+import 'aos/dist/aos.css'
 
 const Footer = () => {
+  useEffect(()=>{
+    AOS.init({duration: 2000});
+  },[]);  
 
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center" data-aos="fade-up">
   
       <div
         className="relative min-h-96 flex flex-col md:flex-row justify-center items-center text-white p-5 md:pr-28 pr-12 w-full"

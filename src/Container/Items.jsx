@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import black from"../assets/black.png"
 import white from "../assets/white.png"
 import hodis from "../assets/hodis.png"
 import men4 from "../assets/men4.png"
+import AOS from "aos"
+import 'aos/dist/aos.css'
 
 
 const Items = () => {
+  useEffect(()=>{
+    AOS.init({duration: 2000});
+  },[])
     
       const arivals=[
         {
@@ -39,7 +44,7 @@ const Items = () => {
       ]
       
   return (
-    <div>
+    <div data-aos="fade-up">
              
         
               {/* new arivals */}

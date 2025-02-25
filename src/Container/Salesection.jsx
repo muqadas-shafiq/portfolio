@@ -1,10 +1,16 @@
 import React from 'react'
 import track from "../assets/track-suit.png"
 import { FaStar } from "react-icons/fa6";
+import AOS from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const Salesection = () => {
+  useEffect(()=>{
+    AOS.init({duration: 2000});
+  },[]);  
   return (
-    <div>
+    <div data-aos="fade-up">
         <div className="bg-gray-100  flex md:flex-row flex-col justify-between pl-4">
                 <div>
                 <img src={track} />

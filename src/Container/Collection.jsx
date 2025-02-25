@@ -3,8 +3,14 @@ import men1 from "../assets/men1.jpeg";
 import women1 from "../assets/women1.jpeg";
 import kid1 from "../assets/kid1.jpeg";
 import { Link } from 'react-router-dom';
+import AOS from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const Collection = () => {
+  useEffect(()=>{
+    AOS.init({duration: 2000});
+  },[]);  
      const collections = [
         {
           name: "MENS",
@@ -26,7 +32,7 @@ const Collection = () => {
         },
       ];
   return (
-    <div>
+    <div data-aos="fade-up">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-20 py-8">
         {collections.map((item, index) => (
           <div
