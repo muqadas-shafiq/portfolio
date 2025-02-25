@@ -19,7 +19,7 @@ const Home = () => {
     <Navbar/>
       {/* Hero Section */}
 
-        <div className="relative w-full h-screen">
+        <div className="relative  h-screen">
                        <img src={autmn} alt="Autumn" className="w-full h-screen object-cover" />
                        <div className="absolute inset-0 flex justify-center">
                          <div className="flex justify-center items-center text-white">
