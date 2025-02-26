@@ -44,7 +44,7 @@ const Items = () => {
       ]
       
   return (
-    <div data-aos="fade-up">
+    <div data-aos="fade-up ">
              
         
               {/* new arivals */}

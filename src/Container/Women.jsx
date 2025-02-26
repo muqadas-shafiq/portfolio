@@ -8,6 +8,7 @@ import woman3 from "../assets/woman3.jpeg"
 import { FaInstagram } from "react-icons/fa6";
 import AOS from "aos";
 import 'aos/dist/aos.css'
+import hodis from "../assets/hodis.png"
 
 
 import { useNavigate } from "react-router-dom";
@@ -69,10 +70,22 @@ const Women = () => {
     ))}
   </div>
 </div>
+ <div className='flex md:flex-row flex-col items-center justify-between mt-20'>
+        <div >
+          <div className='bg-slate-300 rounded-full md:w-[500px] w-[350px] gap-5 md:mb-0 mb-12' data-aos="fade-right"> <div data-aos="fade-left"><img src={hodis} /></div></div>
+        </div>
+        
+        <div className='pl-20 w-full flex flex-col items-start justify-center md:ml-14 ml-0' data-aos="fade-up">
+          <h2 className='md:text-3xl text-2xl font-semibold mb-5'>Trending Products</h2>
+          <h1 className='md:text-6xl text-4xl font-bold'>ZIP HOODEY</h1>
+          <p className='mt-12 text-2xl hover:text-gray-600 hover:text-[20px]'>Discover Now</p>
+          
+        </div>
+      </div>
       <Items />
     
 
-<div className='flex items-center justify-center my-5 flex-col ' data-aos="fade-up">
+<div className='flex items-center justify-center my-5 flex-col ' data-aos="fade-left">
   <h1 className='text-5xl font-bold'>FOLLOW US ON INSTAGRAM</h1>
   <FaInstagram className='text-7xl mt-5 hover:text-gray-600'/>
   <p className='text-2xl'>https://Fassionspot.com</p>
