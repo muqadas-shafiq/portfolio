@@ -9,7 +9,7 @@ import 'aos/dist/aos.css'
 
 const Items = () => {
   useEffect(()=>{
-    AOS.init({duration: 2000});
+    AOS.init({duration: 3000});
   },[])
     
       const arivals=[
@@ -44,7 +44,7 @@ const Items = () => {
       ]
       
   return (
-    <div data-aos="fade-up ">
+    <div data-aos="fade-up">
              
         
               {/* new arivals */}
