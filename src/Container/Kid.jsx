@@ -8,7 +8,10 @@ import { GiWoodCabin } from "react-icons/gi";
 import Items from './Items'
 import Footer from './Footer'
 
+import { useNavigate } from "react-router-dom";
+
 const Kid = () => {
+    const navigate = useNavigate();
   useEffect(()=>{
       AOS.init({duration: 2000});
     },[])
@@ -55,6 +58,15 @@ const Kid = () => {
       </div>
       <Items/>
       <Footer/>
+        {/* back to home page */}
+     <div className="flex justify-center mt-2">
+        <button
+          onClick={() => navigate("/")} // ✅ Go back to home page
+          className="px-6 py-2 bg-green-800 text-white text-lg rounded-lg hover:bg-green-700 transition"
+        >
+          Back to Home Page
+        </button>
+      </div>
     </div>
   )
 }
