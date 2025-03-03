@@ -47,8 +47,9 @@ const Women = () => {
    
    
   return (
-    <div className="relative mt-12 h-[100vh] mx-3">
-      <img src={women} className="w-full h-[100vh] object-cover " data-aos="fade-left" alt="Women" />
+    <div className="relative mt-12 h-[100vh] mx-3 w-full overflow-x-hidden">
+      <img src={women} className="w-full h-[100vh] object-cover" data-aos="fade-left" alt="Women" />
+
 
       
       <div className="absolute inset-0 flex justify-center items-center ">
@@ -62,7 +63,7 @@ const Women = () => {
   <div className='flex md:flex-row flex-col gap-5 ' data-aos="fade-up">
     {blog.map((item, index)=>(
       <div key={index}>
-        <div className=''> <img src={item.img} className='h-[70vh] w-[50vh]' /></div>
+        <div className=''> <img src={item.img} className='h-[70vh] w-[50vh] md:ml-0 ml-5' /></div>
         <div className='font-medium text-[18px]'>{item.h2}  </div>
         <div className='text-[18px] font-medium text-amber-600 hover:text-gray-600'>{item.p}  </div>
         <div className='font-medium text-gray-600'>{item.p1}  </div>
@@ -70,12 +71,12 @@ const Women = () => {
     ))}
   </div>
 </div>
- <div className='flex md:flex-row flex-col items-center justify-between mt-20'>
-        <div >
-          <div className='bg-slate-300 rounded-full md:w-[500px] w-[350px] gap-5 md:mb-0 mb-12' data-aos="fade-right"> <div data-aos="fade-left"><img src={hodis} /></div></div>
+ <div className='w-full flex md:flex-row flex-col items-center justify-between mt-20 '>
+        <div  >
+          <div className='bg-slate-300 rounded-full w-[350px] gap-5 md:mb-0 mb-12' data-aos="fade-right"> <div data-aos="fade-left"><img src={hodis} /></div></div>
         </div>
         
-        <div className='pl-20 w-full flex flex-col items-start justify-center md:ml-14 ml-0' data-aos="fade-up">
+        <div className='pl-20 w-screen flex flex-col items-start justify-center md:ml-14 ml-0' data-aos="fade-up">
           <h2 className='md:text-3xl text-2xl font-semibold mb-5'>Trending Products</h2>
           <h1 className='md:text-6xl text-4xl font-bold'>ZIP HOODEY</h1>
           <p className='mt-12 text-2xl hover:text-gray-600 hover:text-[20px]'>Discover Now</p>
